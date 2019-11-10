@@ -1,0 +1,14 @@
+[%- # Provide a title -%]
+[% META title = 'Projects' -%]
+
+[% # Some basic HTML with a loop to display Projects -%]
+<table>
+<tr><th>ID</th><th>Name</th></tr>
+[% # Display each book in a table row %]
+[% FOREACH project IN projects -%]
+  <tr>
+    <td>[% project.id %]</td>
+    <td>[% project.name %]</td>
+  </tr>
+[% END -%]
+</table>

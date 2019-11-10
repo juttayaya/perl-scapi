@@ -48,3 +48,6 @@ cpanm MooseX::NonMoose~0.25
 
 16. Generate Catalyst Controller
 ./script/scapi_create.pl controller Projects
+
+17. Generate Catalyst View
+./script/scapi_create.pl view HTML TT

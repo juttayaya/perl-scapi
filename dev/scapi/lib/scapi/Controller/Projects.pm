@@ -25,7 +25,7 @@ sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
     $c->stash(projects => [$c->model('DB::Project')->all]);
-    $c->stash(template => 'projects/list.tt2');
+    $c->stash(template => 'projects/list.tt');
 }
 
 

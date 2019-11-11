@@ -5,6 +5,7 @@
 <head>
 <title>[% template.title or "Scapi Demo" %]</title>
 <link rel="stylesheet" href="[% c.uri_for('/static/css/main.css') %]" />
+<script src="[% c.uri_for('/static/js/vue.js') %]" />
 </head>
 
 <body>

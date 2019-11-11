@@ -12,3 +12,21 @@
   </tr>
 [% END -%]
 </table>
+
+<hr />
+<script>
+  var app = new Vue({
+    el: "projects-vue",
+    data: {
+      projects: [
+[% FOREACH project IN projects -%]
+{ name: '[% project.name %]'},
+[% END -%]
+      ]
+    }
+  })
+</script>
+<p>vue.js list</p>
+<ol id="projects-vue">
+    <li v-for="project in projects">{{ project.name }}</li>
+</ol>

@@ -51,3 +51,6 @@ cpanm MooseX::NonMoose~0.25
 
 17. Generate Catalyst View
 ./script/scapi_create.pl view HTML TT
+
+18. Install Catalyst::View::TT
+cpanm Catalyst::View::TT

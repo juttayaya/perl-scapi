@@ -1,0 +1,12 @@
+<p>Welcome to the Scapi Demo</p>
+
+<div id="motd">{{ motd }}</div>
+
+<script>
+  var motd = new Vue({
+    el: "#motd",
+    data: {
+      motd: "Today's vue.js time is: " + new Date().toLocaleString()
+    }
+  })
+</script>

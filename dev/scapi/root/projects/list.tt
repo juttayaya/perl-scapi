@@ -1,5 +1,5 @@
 [%- # Provide a title -%]
-[% META title = 'Projects' -%]
+[% META title = 'Scapi Projects' -%]
 
 [% # Some basic HTML with a loop to display Projects -%]
 <table>
@@ -15,12 +15,14 @@
 
 <hr />
 <p>vue.js list</p>
-<ol id="projects-1">
+<div id="projects-1">
+<ol>
     <li v-for="project in projects">{{ project.name }}</li>
 </ol>
+</div>
 <script>
   var app = new Vue({
-    el: "projects-1",
+    el: "#projects-1",
     data: {
       projects: [
 [% FOREACH project IN projects -%]

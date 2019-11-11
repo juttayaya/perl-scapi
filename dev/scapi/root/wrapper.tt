@@ -3,9 +3,9 @@
     %]"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>[% template.title or "Scapi Demo" %]</title>
-<link rel="stylesheet" href="[% c.uri_for('/static/css/main.css') %]" />
-<script src="[% c.uri_for('/static/js/vue.js') %]" />
+  <title>[% template.title or "Scapi Demo" %]</title>
+  <link rel="stylesheet" href="[% c.uri_for('/static/css/main.css') %]" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>

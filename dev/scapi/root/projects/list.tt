@@ -32,3 +32,11 @@
     }
   })
 </script>
+<hr />
+<form method="post" action="[% c.uri_for('add_project') %]">
+    <table>
+        <tr><td>Project Name:</td><td><input type="text" name="project_name"></td></tr>
+    </table>
+    <input type="submit" name="Submit" value="Add Project">
+</form>
+

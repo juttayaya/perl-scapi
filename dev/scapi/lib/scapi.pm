@@ -20,7 +20,7 @@ use Catalyst qw/
     -Debug
     ConfigLoader
     Static::Simple
-    Plugin::RedirectTo
+    RedirectTo
 /;
 
 extends 'Catalyst';

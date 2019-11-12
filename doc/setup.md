@@ -54,3 +54,6 @@ cpanm MooseX::NonMoose~0.25
 
 18. Install Catalyst::View::TT
 cpanm Catalyst::View::TT
+
+19. Install Catalyst::Plugin::RedirectTo
+cpanm Catalyst::Plugin::RedirectTo

@@ -28,6 +28,16 @@ sub index :Path :Args(0) {
     $c->stash(template => 'projects/list.tt');
 }
 
+sub add_project :Chained('base') :PathPart('add_project') :Args(0) {
+    my ($self, $c) = @_;
+
+    my $project_name = $c->request->params->{project_name};
+    my $project = $c->model('DB::Project')->create({
+        name => $project_name
+    });
+
+    $c->redirect_to_action('index');
+}
 
 
 =encoding utf8

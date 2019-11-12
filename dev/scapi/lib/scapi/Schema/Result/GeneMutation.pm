@@ -1,12 +1,12 @@
 use utf8;
-package scapi::Schema::Result::Project;
+package scapi::Schema::Result::GeneMutation;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-scapi::Schema::Result::Project
+scapi::Schema::Result::GeneMutation
 
 =cut
 
@@ -30,11 +30,11 @@ extends 'DBIx::Class::Core';
 
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<project>
+=head1 TABLE: C<gene_mutation>
 
 =cut
 
-__PACKAGE__->table("project");
+__PACKAGE__->table("gene_mutation");
 
 =head1 ACCESSORS
 
@@ -73,24 +73,34 @@ __PACKAGE__->set_primary_key("id");
 
 =head1 RELATIONS
 
-=head2 studies
+=head2 study_gene_mutations
 
 Type: has_many
 
-Related object: L<scapi::Schema::Result::Study>
+Related object: L<scapi::Schema::Result::StudyGeneMutation>
 
 =cut
 
 __PACKAGE__->has_many(
-  "studies",
-  "scapi::Schema::Result::Study",
-  { "foreign.project_id" => "self.id" },
+  "study_gene_mutations",
+  "scapi::Schema::Result::StudyGeneMutation",
+  { "foreign.gene_mutation_id" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
+=head2 studies
+
+Type: many_to_many
+
+Composing rels: L</study_gene_mutations> -> study
+
+=cut
+
+__PACKAGE__->many_to_many("studies", "study_gene_mutations", "study");
+
 
 # Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-11-12 16:48:25
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:KNf9lwQP+e5EoRozVBHXig
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:KagiboPIwb4Glpw9rgJPSQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

@@ -5,11 +5,11 @@ use base 'Catalyst::Model::DBIC::Schema';
 
 __PACKAGE__->config(
     schema_class => 'scapi::Schema',
-
+    
     connect_info => {
         dsn => 'dbi:mysql:database=scapi_db;host=scapi-db.cluster-c9syuayperbe.us-east-1.rds.amazonaws.com',
         user => 'scapi_user',
-        password => 'XXXXXX',
+        password => 'Ipacs2718',
         AutoCommit => q{1},
     }
 );
